@@ -151,6 +151,25 @@
           duration: 2500 + Math.random() * 1500,
           easing: "ease-out"
         });
+        .confetti {
+  position: fixed;
+  font-size: 16px;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatDown linear forwards;
+}
+
+@keyframes floatDown {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+}
+
 
         setTimeout(() => confetti.remove(), 4000);
       }
